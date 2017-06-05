@@ -39,8 +39,9 @@
 </nav>
 
 <div class="container main-container">
-    <div class="card" id="card-home" style="margin-top: 15px">
+    <div class="card" id="card-home">
         <div class="card-content">
+
             <div id="left-column">
                 <?php
                 for ($i = 1; $i < 51; $i++) {
@@ -48,6 +49,7 @@
                 }
                 ?>
             </div>
+
             <div id="right-column">
                 <?php
                 for ($i = 51; $i < 101; $i++) {
@@ -55,6 +57,7 @@
                 }
                 ?>
             </div>
+
             <br style="clear:both;"/>
         </div>
     </div>
