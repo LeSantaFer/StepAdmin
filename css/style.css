@@ -1,0 +1,26 @@
+body {
+    background-color: #F5F5F5;
+}
+
+#header, #container {
+    padding-left: 18%;
+}
+
+#slide-out {
+    width: 18%;
+}
+
+ul#slide-out a:hover {
+    background-color: #00BCD4;
+    color: #FFF;
+}
+
+li.active a {
+    background-color: #00BCD4;
+    color: #FFF;
+}
+
+li.active a. {
+    background-color: #00BCD4;
+    color: #FFF;
+}
