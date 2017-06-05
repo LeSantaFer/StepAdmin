@@ -39,3 +39,13 @@ li.active a {
     background-color: #00BCD4;
     color: #FFF;
 }
+
+#left-column {
+    width: 50%;
+    float: left;
+}
+
+#right-column {
+    width: 50%;
+    float: left;
+}

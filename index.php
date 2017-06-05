@@ -41,14 +41,21 @@
 <div class="container main-container">
     <div class="card" id="card-home" style="margin-top: 15px">
         <div class="card-content">
-            <h5><strong>Spam Reaper</strong></h5>
-            <h6><strong>Anti-spam application</strong></h6>
-            <p>Spam Reaper is an incredible network that will decimate phone spammers, such as telephone and bank companies, prisoners, coupist and blackmailers.</p>
-            <p>Nam lorem nisi, tincidunt ut efficitur eu, ultrices et tortor. Quisque facilisis purus nulla, eu rutrum velit laoreet a. Mauris pulvinar, justo vel hendrerit imperdiet, ipsum lectus molestie erat, eu mollis erat mi tincidunt libero. Cras viverra tincidunt blandit. Aliquam cursus congue tellus quis sollicitudin. Suspendisse in urna at tortor pretium sollicitudin in sit amet nisl. Etiam ut metus mattis, lobortis quam id, efficitur eros. Nam congue ligula nec vestibulum cursus. Pellentesque magna lectus, pretium a purus in, lobortis egestas lectus. In tincidunt placerat iaculis. Integer scelerisque, nibh in gravida tincidunt, leo enim varius erat, et euismod felis velit nec purus. Phasellus eu faucibus nibh. Duis ultrices urna nec ante malesuada ultrices. Pellentesque non condimentum purus, vitae condimentum ex. Donec vel ex porttitor, porta diam sit amet, ultricies mauris.</p>
-            <br>
-            <a href="https://github.com/spamreaper/">
-                <img src="images/badge.png" width="200px">
-            </a>
+            <div id="left-column">
+                <?php
+                for ($i = 1; $i < 51; $i++) {
+                    echo("<p>" . $i . "</p>");
+                }
+                ?>
+            </div>
+            <div id="right-column">
+                <?php
+                for ($i = 51; $i < 101; $i++) {
+                    echo("<p>" . $i . "</p>");
+                }
+                ?>
+            </div>
+            <br style="clear:both;"/>
         </div>
     </div>
 </div>
