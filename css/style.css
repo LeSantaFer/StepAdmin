@@ -1,26 +1,41 @@
 body {
     background-color: #F5F5F5;
+    padding-left: 18%;
 }
 
-#header, #container {
-    padding-left: 18%;
+.header {
+    height: 98px;
+    width: 100%;
+}
+
+.main-container {
+    padding: 1% 2%;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 2.0rem;
+    line-height: 98px;
+    padding: 0 4%;
+    color: black;
 }
 
 #slide-out {
     width: 18%;
 }
 
+ul#slide-out a {
+    height: 49px;
+    line-height: 49px;
+}
+
 ul#slide-out a:hover {
     background-color: #00BCD4;
     color: #FFF;
+    transition: 0.3s;
 }
 
 li.active a {
-    background-color: #00BCD4;
-    color: #FFF;
-}
-
-li.active a. {
     background-color: #00BCD4;
     color: #FFF;
 }
