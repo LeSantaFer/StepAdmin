@@ -8,31 +8,33 @@
     <!-- CSS  -->
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
 <nav class="white header">
     <div class="nav-wrapper fixed" id="header-container">
-        <a class="page-title"><strong>Usuários</strong></a>
+        <a class="page-title"><strong>Números</strong></a>
 
-        <!--ul class="left">
+        <!--ul class="right hide-on-med-and-down">
             <li>
                 <div class="input-field" id="search-input">
                     <input id="search" class="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons text-darken-4 black-text">search</i></label>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
                 </div>
             </li>
         </ul-->
 
         <ul id="slide-out" class="side-nav fixed">
-            <li class="active">
-                <a class="waves-effect waves-light" href="">Usuários</a>
-            </li>
             <li>
-                <a class="waves-effect waves-light" href="numeros.php">Números</a>
+                <a class="waves-effect waves-light" href="index.php">Usuários</a>
+            </li>
+            <li class="active">
+                <a class="waves-effect waves-light" href="">Números</a>
             </li>
         </ul>
+
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 
