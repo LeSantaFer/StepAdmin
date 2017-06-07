@@ -60,12 +60,38 @@ li.active a {
 
 /* Card columns */
 
+/* Left column and its sub-columns */
+
 #left-column {
+    width: 47.5%;
+    float: left;
+}
+
+#left-column-left {
     width: 50%;
     float: left;
 }
 
-#right-column {
+#left-column-right {
     width: 50%;
     float: left;
+    text-align: right;
+}
+
+/* Right column and its sub-columns */
+
+#right-column {
+    width: 47.5%;
+    float: right;
+}
+
+#right-column-left {
+    width: 50%;
+    float: left;
+}
+
+#right-column-right {
+    width: 50%;
+    float: left;
+    text-align: right;
 }
