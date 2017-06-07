@@ -17,46 +17,40 @@
 ?>
 
 <div class="container main-container">
-    <div class="card" id="card-home">
+    <div class="card">
         <div class="card-content">
 
-            <div class="left-column">
+            <ul class="collection column">
                 <?php
                     for ($i = 1; $i < 51; $i++) {
                         echo("
-                            <div class='list-item'>
-                                <div class='sub-column'>
-                                    <p>$i</p>
-                                </div>
-                                <div class='sub-column'>
-                                    <a class='waves-effect waves-grey btn-flat float-right'>
+                            <li class='collection-item waves-effect waves-grey'>
+                                <div>$i
+                                    <p class='secondary-content'>
                                         <strong>INFO</strong>
-                                    </a>
+                                    </p>
                                 </div>
-                            </div>
+                            </li>
                         ");
                     }
                 ?>
-            </div>
+            </ul>
 
-            <div class="right-column">
+            <ul class="collection column">
                 <?php
                     for ($i = 51; $i < 101; $i++) {
                         echo("
-                            <div class='list-item'>
-                                <div class='sub-column'>
-                                    <p>$i</p>
-                                </div>
-                                <div class='sub-column'>
-                                    <a class='waves-effect waves-grey btn-flat float-right'>
+                            <li class='collection-item waves-effect waves-grey'>
+                                <div>$i
+                                    <p class='secondary-content'>
                                         <strong>INFO</strong>
-                                    </a>
+                                    </p>
                                 </div>
-                            </div>
+                            </li>
                         ");
                     }
                 ?>
-            </div>
+            </ul>
 
             <br style="clear:both;"/>
         </div>

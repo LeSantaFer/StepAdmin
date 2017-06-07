@@ -58,6 +58,14 @@ li.active a {
     background-color: #EEEEEE;
 }
 
+.waves-effect.waves-cyan .waves-ripple {
+    background-color: #00BCD4;
+}
+
+.btn-flat {
+    color: #555;
+}
+
 .btn-flat:hover {
     background-color: #FFF;
 }
@@ -68,29 +76,13 @@ li.active a {
     box-shadow: 0 4px 10px #aaa;
 }
 
-/* Card container personalizations */
-
-.list-item {
-    height: 49px;
-}
-
-.float-right {
-    float: right;
-}
-
 /* Columns and sub-column */
 
-.left-column {
-    width: 47.5%;
-    float: left;
+.collection-item {
+    width: 100%;
 }
 
-.right-column {
-    width: 47.5%;
-    float: right;
-}
-
-.sub-column {
+.column {
     width: 50%;
     float: left;
 }
