@@ -29,7 +29,9 @@
                                     <p>$i</p>
                                 </div>
                                 <div class='sub-column'>
-                                    <a class='waves-effect btn-flat float-right'>INFO</a>
+                                    <a class='waves-effect waves-grey btn-flat float-right'>
+                                        <strong>INFO</strong>
+                                    </a>
                                 </div>
                             </div>
                         ");
@@ -46,7 +48,9 @@
                                     <p>$i</p>
                                 </div>
                                 <div class='sub-column'>
-                                    <a class='waves-effect btn-flat float-right'>INFO</a>
+                                    <a class='waves-effect waves-grey btn-flat float-right'>
+                                        <strong>INFO</strong>
+                                    </a>
                                 </div>
                             </div>
                         ");

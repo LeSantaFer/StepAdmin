@@ -52,13 +52,23 @@ li.active a {
     color: #FFF;
 }
 
+/* Button properties */
+
+.waves-effect.waves-grey .waves-ripple {
+    background-color: #EEEEEE;
+}
+
+.btn-flat:hover {
+    background-color: #FFF;
+}
+
 /* Card properties */
 
 .card {
     box-shadow: 0 4px 10px #aaa;
 }
 
-/* Card container */
+/* Card container personalizations */
 
 .list-item {
     height: 49px;
