@@ -1,6 +1,13 @@
+/* Main content */
+
 body {
     background-color: #F8F8F8;
     padding-left: 18%;
+}
+
+.main-container {
+    padding: 2% 3%;
+    width: 100%;
 }
 
 .header {
@@ -9,20 +16,13 @@ body {
     box-shadow: 0 2px 6px #aaa;
 }
 
-.main-container {
-    padding: 2% 3%;
-    width: 100%;
-}
+/* Header */
 
 .page-title {
     font-size: 2.0rem;
     line-height: 98px;
     padding: 0 5%;
     color: black;
-}
-
-.search {
-
 }
 
 i.icon-dark {
@@ -58,40 +58,29 @@ li.active a {
     box-shadow: 0 4px 10px #aaa;
 }
 
-/* Card columns */
+/* Card container */
 
-/* Left column and its sub-columns */
+.list-item {
+    height: 49px;
+}
 
-#left-column {
+.float-right {
+    float: right;
+}
+
+/* Columns and sub-column */
+
+.left-column {
     width: 47.5%;
     float: left;
 }
 
-#left-column-left {
-    width: 50%;
-    float: left;
-}
-
-#left-column-right {
-    width: 50%;
-    float: left;
-    text-align: right;
-}
-
-/* Right column and its sub-columns */
-
-#right-column {
+.right-column {
     width: 47.5%;
     float: right;
 }
 
-#right-column-left {
+.sub-column {
     width: 50%;
     float: left;
-}
-
-#right-column-right {
-    width: 50%;
-    float: left;
-    text-align: right;
 }

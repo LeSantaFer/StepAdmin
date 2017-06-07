@@ -55,6 +55,7 @@
                 </div>
             </div>
 
+            <!-- This forces parent div to wrap content -->
             <br style="clear:both;"/>
         </div>
     </div>

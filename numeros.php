@@ -20,38 +20,38 @@
     <div class="card" id="card-home">
         <div class="card-content">
 
-            <div id="left-column">
-                <div id="left-column-left">
-                    <?php
+            <div class="left-column">
+                <?php
                     for ($i = 1; $i < 51; $i++) {
-                        echo("<p>" . $i . "</p>");
+                        echo("
+                            <div class='list-item'>
+                                <div class='sub-column'>
+                                    <p>$i</p>
+                                </div>
+                                <div class='sub-column'>
+                                    <a class='waves-effect btn-flat float-right'>INFO</a>
+                                </div>
+                            </div>
+                        ");
                     }
-                    ?>
-                </div>
-                <div id="left-column-right">
-                    <?php
-                    for ($i = 51; $i < 101; $i++) {
-                        echo("<p>" . $i . "</p>");
-                    }
-                    ?>
-                </div>
+                ?>
             </div>
 
-            <div id="right-column">
-                <div id="right-column-left">
-                    <?php
-                    for ($i = 101; $i < 151; $i++) {
-                        echo("<p>" . $i . "</p>");
+            <div class="right-column">
+                <?php
+                    for ($i = 51; $i < 101; $i++) {
+                        echo("
+                            <div class='list-item'>
+                                <div class='sub-column'>
+                                    <p>$i</p>
+                                </div>
+                                <div class='sub-column'>
+                                    <a class='waves-effect btn-flat float-right'>INFO</a>
+                                </div>
+                            </div>
+                        ");
                     }
-                    ?>
-                </div>
-                <div id="right-column-right">
-                    <?php
-                    for ($i = 151; $i < 201; $i++) {
-                        echo("<p>" . $i . "</p>");
-                    }
-                    ?>
-                </div>
+                ?>
             </div>
 
             <br style="clear:both;"/>
