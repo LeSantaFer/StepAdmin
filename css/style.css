@@ -10,6 +10,10 @@ body {
     width: 100%;
 }
 
+a strong {
+    color: black;
+}
+
 /* Header */
 
 .header {
@@ -63,7 +67,7 @@ li.active a {
 }
 
 .btn-flat:hover {
-    background-color: #FFF;
+    background-color: transparent;
 }
 
 /* Card properties */
@@ -73,7 +77,7 @@ li.active a {
 }
 
 .card .card-content {
-    padding: 0;
+    padding: 2px 0;
 }
 
 /* Collection and column properties */
@@ -86,7 +90,7 @@ li.active a {
     /* This is necessary because waves effect overrides width */
     width: 50%;
     float: left;
-    padding: 15px 20px;
+    padding: 16px 25px;
 
     /* This defines the divider properties. Line below keeps [my] default value. */
     /* border-bottom: 1px solid #EEE; */

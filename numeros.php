@@ -22,19 +22,19 @@
 
             <ul class="collection">
                 <?php
-                    for ($i = 0; $i < 100; $i++) {
-                        echo("
-                            <li class='collection-item waves-effect waves-grey'>
+                for ($i = 0; $i < 100; $i++) {
+                    include("php/numberGenerator.php");
+                    echo("
+                        <li class='collection-item waves-effect waves-grey'>
                             <div>
-                        ");
-                                include("php/numberGenerator.php");
-                        echo("  <p class='secondary-content'>  
+                                $number
+                                <a href='#main-modal' class='secondary-content'>  
                                     <strong>INFORMAÇÕES</strong>
-                                </p>
+                                </a>
                             </div>
-                            </li>
-                        ");
-                    }
+                        </li>
+                    ");
+                }
                 ?>
             </ul>
 
@@ -45,7 +45,23 @@
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+
+<!-- Modal  -->
+<script>
+    $(document).ready(function() {
+        $('.modal').modal();
+    });
+</script>
 
 </body>
+
+<div class='modal modal-fixed-footer' id='main-modal'>
+    <div class='modal-content'>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="modal-action modal-close waves-effect waves-grey btn-flat">Excluir conta</a>
+    </div>
+</div>
+
 </html>
