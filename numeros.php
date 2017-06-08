@@ -20,39 +20,24 @@
     <div class="card">
         <div class="card-content">
 
-            <ul class="collection column">
+            <ul class="collection">
                 <?php
-                    for ($i = 1; $i < 51; $i++) {
+                    for ($i = 0; $i < 100; $i++) {
                         echo("
                             <li class='collection-item waves-effect waves-grey'>
-                                <div>$i
-                                    <p class='secondary-content'>
-                                        <strong>INFO</strong>
-                                    </p>
-                                </div>
+                            <div>
+                        ");
+                                include("php/nameGenerator.php");
+                        echo("  <p class='secondary-content'>  
+                                    <strong>INFORMAÇÕES</strong>
+                                </p>
+                            </div>
                             </li>
                         ");
                     }
                 ?>
             </ul>
 
-            <ul class="collection column">
-                <?php
-                    for ($i = 51; $i < 101; $i++) {
-                        echo("
-                            <li class='collection-item waves-effect waves-grey'>
-                                <div>$i
-                                    <p class='secondary-content'>
-                                        <strong>INFO</strong>
-                                    </p>
-                                </div>
-                            </li>
-                        ");
-                    }
-                ?>
-            </ul>
-
-            <br style="clear:both;"/>
         </div>
     </div>
 </div>

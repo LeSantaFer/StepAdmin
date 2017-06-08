@@ -10,13 +10,13 @@ body {
     width: 100%;
 }
 
+/* Header */
+
 .header {
     height: 98px;
     width: 100%;
     box-shadow: 0 2px 6px #aaa;
 }
-
-/* Header */
 
 .page-title {
     font-size: 2.0rem;
@@ -58,10 +58,6 @@ li.active a {
     background-color: #EEEEEE;
 }
 
-.waves-effect.waves-cyan .waves-ripple {
-    background-color: #00BCD4;
-}
-
 .btn-flat {
     color: #555;
 }
@@ -76,13 +72,23 @@ li.active a {
     box-shadow: 0 4px 10px #aaa;
 }
 
-/* Columns and sub-column */
-
-.collection-item {
-    width: 100%;
+.card .card-content {
+    padding: 0;
 }
 
-.column {
+/* Collection and column properties */
+
+.collection {
+    border: 0;
+}
+
+.collection .collection-item {
+    /* This is necessary because waves effect overrides width */
     width: 50%;
     float: left;
+    padding: 15px 20px;
+
+    /* This defines the divider properties. Line below keeps [my] default value. */
+    /* border-bottom: 1px solid #EEE; */
+    border-bottom: 0;
 }
