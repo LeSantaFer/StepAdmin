@@ -108,4 +108,5 @@ $names = ["Adelaide Siebra",
     "Zita Gil"
 ];
 
-$name = $names[rand(0, 99)];
+// it's much slower include every time
+// $string = $names[rand(0, 99)];

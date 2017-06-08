@@ -13,32 +13,14 @@
 <body>
 
 <?php
-    $menu = 0;
+    $page = "index";
     include("head.php")
 ?>
 
 <div class="container main-container">
     <div class="card">
         <div class="card-content">
-
-            <ul class="collection">
-                <?php
-                for ($i = 0; $i < 100; $i++) {
-                    include("php/nameGenerator.php");
-                    echo("
-                        <li class='collection-item waves-effect waves-grey'>
-                            <div>
-                                $name
-                                <a href='#main-modal' class='secondary-content'>  
-                                    <strong>INFORMAÇÕES</strong>
-                                </a>
-                            </div>
-                        </li>
-                    ");
-                }
-                ?>
-            </ul>
-
+            <?php include("collection.php") ?>
         </div>
     </div>
 </div>

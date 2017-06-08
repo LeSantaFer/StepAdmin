@@ -12,32 +12,14 @@
 <body>
 
 <?php
-    $menu = 1;
+    $page = "numbers";
     include("head.php")
 ?>
 
 <div class="container main-container">
     <div class="card">
         <div class="card-content">
-
-            <ul class="collection">
-                <?php
-                for ($i = 0; $i < 100; $i++) {
-                    include("php/numberGenerator.php");
-                    echo("
-                        <li class='collection-item waves-effect waves-grey'>
-                            <div>
-                                $number
-                                <a href='#main-modal' class='secondary-content'>  
-                                    <strong>INFORMAÇÕES</strong>
-                                </a>
-                            </div>
-                        </li>
-                    ");
-                }
-                ?>
-            </ul>
-
+            <?php include("collection.php") ?>
         </div>
     </div>
 </div>

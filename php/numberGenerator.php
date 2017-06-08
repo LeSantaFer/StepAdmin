@@ -11,4 +11,4 @@ $regionPrefix = "(" . rand(1, 9) . "" . rand(1, 9) . ") ";
 $uniqueNumber = "9" . rand(1, 9) . "" . rand(1, 9) . rand(1, 9) . "" . rand(1, 9)
     . rand(1, 9) . "" . rand(1, 9) . rand(1, 9) . "" . rand(1, 9);
 
-$number = $countryPrefix . $regionPrefix . $uniqueNumber;
+$string = $countryPrefix . $regionPrefix . $uniqueNumber;
