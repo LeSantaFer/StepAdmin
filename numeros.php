@@ -27,7 +27,7 @@
                             <li class='collection-item waves-effect waves-grey'>
                             <div>
                         ");
-                                include("php/nameGenerator.php");
+                                include("php/numberGenerator.php");
                         echo("  <p class='secondary-content'>  
                                     <strong>INFORMAÇÕES</strong>
                                 </p>

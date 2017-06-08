@@ -18,45 +18,27 @@
 ?>
 
 <div class="container main-container">
-    <div class="card" id="card-home">
+    <div class="card">
         <div class="card-content">
 
-            <div id="left-column">
-                <div id="left-column-left">
-                    <?php
-                    for ($i = 1; $i < 51; $i++) {
-                        echo("<p>" . $i . "</p>");
-                    }
-                    ?>
-                </div>
-                <div id="left-column-right">
-                    <?php
-                    for ($i = 51; $i < 101; $i++) {
-                        echo("<p>" . $i . "</p>");
-                    }
-                    ?>
-                </div>
-            </div>
+            <ul class="collection">
+                <?php
+                for ($i = 0; $i < 100; $i++) {
+                    echo("
+                            <li class='collection-item waves-effect waves-grey'>
+                            <div>
+                        ");
+                    include("php/nameGenerator.php");
+                    echo("  <p class='secondary-content'>  
+                                    <strong>INFORMAÇÕES</strong>
+                                </p>
+                            </div>
+                            </li>
+                        ");
+                }
+                ?>
+            </ul>
 
-            <div id="right-column">
-                <div id="right-column-left">
-                    <?php
-                    for ($i = 101; $i < 151; $i++) {
-                        echo("<p>" . $i . "</p>");
-                    }
-                    ?>
-                </div>
-                <div id="right-column-right">
-                    <?php
-                    for ($i = 151; $i < 201; $i++) {
-                        echo("<p>" . $i . "</p>");
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- This forces parent div to wrap content -->
-            <br style="clear:both;"/>
         </div>
     </div>
 </div>
