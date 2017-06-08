@@ -108,4 +108,4 @@ $names = ["Adelaide Siebra",
     "Zita Gil"
 ];
 
-echo($names[rand(0, 99)]);
+$name = $names[rand(0, 99)];

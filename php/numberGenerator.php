@@ -6,5 +6,9 @@
  * Time: 14:06
  */
 
-printf("+%d%d (%d%d) 9%d%d%d%d-%d%d%d%d" , rand(1, 9), rand(1, 9), rand(1, 9), rand(1, 9),
-    rand(1, 9), rand(1, 9), rand(1, 9), rand(1, 9), rand(1, 9), rand(1, 9), rand(1, 9), rand(1, 9));
+$countryPrefix = "+" . rand(1, 9) . "" . rand(1, 9) . " ";
+$regionPrefix = "(" . rand(1, 9) . "" . rand(1, 9) . ") ";
+$uniqueNumber = "9" . rand(1, 9) . "" . rand(1, 9) . rand(1, 9) . "" . rand(1, 9)
+    . rand(1, 9) . "" . rand(1, 9) . rand(1, 9) . "" . rand(1, 9);
+
+$number = $countryPrefix . $regionPrefix . $uniqueNumber;
