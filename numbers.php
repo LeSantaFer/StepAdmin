@@ -19,7 +19,7 @@
 <div class="container main-container">
     <div class="card">
         <div class="card-content">
-            <?php include("user-table.php") ?>
+            <?php include("users-table.php") ?>
         </div>
     </div>
 </div>

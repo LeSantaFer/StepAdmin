@@ -15,14 +15,17 @@
 <body>
 
 <?php
-    $page = "index";
+    $page = "users";
     include("head.php")
 ?>
 
 <div class="container main-container">
     <div class="card">
         <div class="card-content">
-            <?php include ("user-table.php") ?>
+            <?php
+                if ($page == "users") include("users-table.php");
+                else include("numbers-table.php");
+            ?>
         </div>
     </div>
 </div>

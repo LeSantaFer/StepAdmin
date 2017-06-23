@@ -11,7 +11,7 @@
 <nav class="white header">
     <div class="nav-wrapper fixed" id="header-container">
         <?php
-            if ($page == "index")
+            if ($page == "users")
                 echo("<a class='page-title'><strong>Usuários</strong></a>");
             else if ($page == "numbers")
                 echo("<a class='page-title'><strong>Números</strong></a>");
@@ -27,7 +27,7 @@
         </ul-->
 
         <ul id="slide-out" class="side-nav fixed">
-            <li <?php if ($page == "index") echo("class='active'") ?>>
+            <li <?php if ($page == "users") echo("class='active'") ?>>
                 <a class="waves-effect waves-light" href="index.php">Usuários</a>
             </li>
             <li <?php if ($page == "numbers") echo("class='active'") ?>>

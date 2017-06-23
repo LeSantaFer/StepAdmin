@@ -12,33 +12,38 @@ create table friendship (
   idUserAdded integer not null,
   idUserAdding integer not null,
   primary key(id),
-  foreign key(idUserAdded) references user (id),
-  foreign key(idUserAdding) references user (id));
+  foreign key(idUserAdded) references user(id),
+  foreign key(idUserAdding) references user(id));
 
 /* creating country table */
 create table country (
   id integer not null auto_increment,
-  code varchar(10) not null,
   name varchar(50) not null,
   primary key(id));
 
-/* creating area table */
-create table area (
-  id integer not null auto_increment,
+/* creating country code table */
+create table country_code (
+  code varchar(10) not null,
+  idCountry integer not null,
+  primary key(code),
+  foreign key(idCountry) references country(id));
+
+/* creating area code table */
+create table area_code (
   code varchar(10) not null,
   name varchar(50) not null,
-  primary key(id));
+  primary key(code));
 
 /* creating phone table */
 create table phone (
   id integer not null auto_increment,
   number varchar(20) not null,
-  idCountry integer not null,
-  idArea integer not null,
-  idUser integer,
+  countryCode varchar(10) not null,
+  areaCode varchar(10) not null,
+  idUser integer not null,
   primary key(id),
-  foreign key(idCountry) references country(id),
-  foreign key(idArea) references area(id),
+  foreign key(countryCode) references country_code(code),
+  foreign key(areaCode) references area_code(code),
   foreign key(idUser) references user(id));
 
 /* creating notification table */
