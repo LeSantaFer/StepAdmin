@@ -1,7 +1,9 @@
+<?php include("db/connection.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>Enough Spam! Administração</title>
 
@@ -20,7 +22,7 @@
 <div class="container main-container">
     <div class="card">
         <div class="card-content">
-            <?php include("collection.php") ?>
+            <?php include ("user-table.php") ?>
         </div>
     </div>
 </div>
