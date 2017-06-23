@@ -28,11 +28,21 @@ create table country_code (
   primary key(code),
   foreign key(idCountry) references country(id));
 
+/* creating state table */
+create table state (
+  id integer not null auto_increment,
+  name varchar(50) not null,
+  primary key(id));
+
 /* creating area code table */
 create table area_code (
   code varchar(10) not null,
   name varchar(50) not null,
-  primary key(code));
+  idCountry integer not null,
+  idState integer not null,
+  primary key(code),
+  foreign key(idCountry) references country(id),
+  foreign key(idState) references state(id));
 
 /* creating phone table */
 create table phone (
