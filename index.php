@@ -15,7 +15,6 @@
 <body>
 
 <?php
-    $page = "users";
     include("head.php")
 ?>
 
@@ -23,8 +22,17 @@
     <div class="card">
         <div class="card-content">
             <?php
-                if ($page == "users") include("users-table.php");
-                else include("numbers-table.php");
+                if (isset($_REQUEST["page"])) {
+                    if ($_REQUEST["page"] == "users") {
+                        include("users-table.php");
+                    } else {
+                        include("numbers-table.php");
+                    }
+
+                } else {
+
+                    include("users-table.php");
+                }
             ?>
         </div>
     </div>

@@ -32,27 +32,25 @@ create table country_code (
 create table state (
   id integer not null auto_increment,
   name varchar(50) not null,
-  primary key(id));
+  idCountry integer not null,
+  primary key(id),
+  foreign key(idCountry) references country(id));
 
 /* creating area code table */
 create table area_code (
   code varchar(10) not null,
   name varchar(50) not null,
-  idCountry integer not null,
   idState integer not null,
   primary key(code),
-  foreign key(idCountry) references country(id),
   foreign key(idState) references state(id));
 
 /* creating phone table */
 create table phone (
   id integer not null auto_increment,
   number varchar(20) not null,
-  countryCode varchar(10) not null,
   areaCode varchar(10) not null,
   idUser integer not null,
   primary key(id),
-  foreign key(countryCode) references country_code(code),
   foreign key(areaCode) references area_code(code),
   foreign key(idUser) references user(id));
 

@@ -19,7 +19,10 @@
 <div class="container main-container">
     <div class="card">
         <div class="card-content">
-            <?php include("users-table.php") ?>
+            <?php
+                if ($page == "users") include("users-table.php");
+                else include("numbers-table.php");
+            ?>
         </div>
     </div>
 </div>
