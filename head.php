@@ -22,19 +22,11 @@
 
 <nav class="white header">
     <div class="nav-wrapper fixed" id="header-container">
-        <?php
-            if (isset($_REQUEST["page"])) {
-                if () {
-                    echo("<a class='page-title'><strong>Usuários</strong></a>");
-                } else {
-                    echo("<a href='index.php?page=numbers' class='page-title'><strong>Números</strong></a>");
-                }
-
-            } else {
-
-                echo("<a class='page-title'><strong>Usuários</strong></a>");
-            }
-        ?>
+        <?php if ($pageUsers) { ?>
+            <a class='page-title'><strong>Usuários</strong></a>
+        <?php } else { ?>
+            <a class='page-title'><strong>Números</strong></a>
+        <?php } ?>
 
         <!--ul class="left">
             <li>
@@ -46,15 +38,11 @@
         </ul-->
 
         <ul id="slide-out" class="side-nav fixed">
-            <?php
-                if (isset($_REQUEST["page"]) {
-
-                }
-            ?>
-            <li <?php if (isset($_REQUEST["page"]) && $_REQUEST["page"] == "users") echo("class='active'") ?>>
+            <li <?php if ($pageUsers) echo("class='active'") ?>>
                 <a class="waves-effect waves-light" href="index.php?page=users">Usuários</a>
             </li>
-            <li <?php if ($page == "numbers") echo("class='active'") ?>>
+
+            <li <?php if (!$pageUsers) echo("class='active'") ?>>
                 <a class="waves-effect waves-light" href="index.php?page=numbers">Números</a>
             </li>
         </ul>

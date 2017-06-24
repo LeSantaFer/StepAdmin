@@ -29,7 +29,7 @@ a strong {
     color: black;
 }
 
-i.icon-dark {
+i {
     color: black;
 }
 
@@ -78,21 +78,4 @@ li.active a {
 
 .card .card-content {
     padding: 2px 0;
-}
-
-/* Collection and column properties */
-
-.collection {
-    border: 0;
-}
-
-.collection .collection-item {
-    /* This is necessary because waves effect overrides width */
-    width: 50%;
-    float: left;
-    padding: 16px 25px;
-
-    /* This defines the divider properties. Line below keeps [my] default value. */
-    /* border-bottom: 1px solid #EEE; */
-    border-bottom: 0;
 }
