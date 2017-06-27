@@ -2,79 +2,69 @@
 
 /* create user table */
 create table user (
-  id integer not null auto_increment,
-  name varchar(50) not null,
-  primary key(id));
+  id integer primary key not null auto_increment,
+  name varchar(50) not null);
 
 /* create friendship table */
 create table friendship (
-  id integer not null auto_increment,
+  id integer primary key not null auto_increment,
   idUserAdded integer not null,
   idUserAdding integer not null,
-  primary key(id),
   foreign key(idUserAdded) references user(id),
   foreign key(idUserAdding) references user(id));
 
 /* creating country table */
 create table country (
-  id integer not null auto_increment,
-  name varchar(50) not null,
-  primary key(id));
+  id integer primary key not null auto_increment,
+  name varchar(50) not null);
 
 /* creating country code table */
 create table country_code (
-  code varchar(10) not null,
+  code varchar(10) primary key not null,
   idCountry integer not null,
-  primary key(code),
   foreign key(idCountry) references country(id));
 
 /* creating state table */
 create table state (
-  id integer not null auto_increment,
+  id integer primary key not null auto_increment,
   name varchar(50) not null,
   idCountry integer not null,
-  primary key(id),
   foreign key(idCountry) references country(id));
 
 /* creating area code table */
 create table area_code (
-  code varchar(10) not null,
+  code varchar(10) primary key not null,
   name varchar(50) not null,
   idState integer not null,
-  primary key(code),
   foreign key(idState) references state(id));
 
 /* creating phone table */
 create table phone (
-  id integer not null auto_increment,
+  id integer primary key not null auto_increment,
   number varchar(20) not null,
   areaCode varchar(10) not null,
   idUser integer not null,
-  primary key(id),
   foreign key(areaCode) references area_code(code),
   foreign key(idUser) references user(id));
 
 /* creating notification table */
 create table notification (
-  id integer not null auto_increment,
+  id integer primary key not null auto_increment,
   idPhone integer not null,
   idUserNotified integer not null,
-  primary key(id),
   foreign key(idPhone) references phone(id),
   foreign key(idUserNotified) references user(id));
 
 /* creating denunciation table */
 create table denunciation (
-  id integer not null auto_increment,
+  id integer primary key not null auto_increment,
   idPhone integer not null,
-  primary key(id),
   foreign key(idPhone) references phone(id));
 
 /* creating description table */
 create table description (
-  id integer not null auto_increment,
-  description varchar(50) not null,
-  primary key(id));
+  id integer primary key not null auto_increment,
+  description varchar(50) not null);
 
 /* creating denunciation/description table */
 create table denunciation_description (
@@ -86,9 +76,8 @@ create table denunciation_description (
 
 /* creating suspicious treatment table */
 create table suspicious_treatment (
-  id integer not null auto_increment,
-  name varchar(20) not null,
-  primary key(id));
+  id integer primary key not null auto_increment,
+  name varchar(20) not null);
 
 /* creating treatment configuration table */
 create table config_treatment (
@@ -102,45 +91,38 @@ create table config_treatment (
 
 /* creating feedback configuration table */
 create table config_feedback (
-  nmCallKind varchar(20) not null,
-  showFeedback integer not null,
-  primary key(nmCallKind));
+  nmCallKind varchar(20) primary key  not null,
+  showFeedback integer not null);
 
 /* creating service blocking configuration table */
 create table config_service_block (
-  nmService varchar(20) not null,
-  block integer not null,
-  primary key(nmService));
+  nmService varchar(20) primary key not null,
+  block integer not null);
 
 /* creating guide configuration table */
 create table config_guide (
-  nmView varchar(20) not null,
-  showGuide integer not null,
-  primary key(nmView));
+  nmView varchar(20) primary key not null,
+  showGuide integer not null);
 
 /* creating intro configuration table */
 create table config_intro (
-  showIntro integer not null,
-  primary key(showIntro));
+  showIntro integer primary key not null);
 
 insert into config_intro values(1);
 
 /* creating network to download DB configuration table */
 create table config_network_download_db (
-  nmNetwork varchar(20) not null,
-  downloadIt integer not null,
-  primary key(nmNetwork));
+  nmNetwork varchar(20) primary key not null,
+  downloadIt integer not null);
 
 /* creating suspicious denunciations amount configuration table */
 create table suspicious_denunciations_amount (
-  amount integer not null,
-  primary key(amount));
+  amount integer primary key not null);
 
 /* creating theme configuration table */
 create table config_theme (
-  isDark integer not null,
+  isDark integer primary key not null,
   accentColor char(7) not null,
-  defaultAccentColor char(7) not null,
-  primary key(isDark));
+  defaultAccentColor char(7) not null);
 
 insert into config_theme values(0, '#00BCD4', '#00BCD4');
