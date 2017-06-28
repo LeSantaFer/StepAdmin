@@ -7,7 +7,17 @@
  */
 
 echo("<table class='centered responsive-table'>");
-$querySelect = mysqli_query($con, "select * from phone order by id");
+
+$query = ("select p.id, p.idUser, c.code, p.areaCode, p.number
+  from phone p
+  inner join area_code a
+    on p.areaCode = a.code
+  inner join state s
+    on a.idState = s.id
+  inner join country_code c
+    on s.idCountry = c.idCountry");
+
+$querySelect = mysqli_query($con, $query);
 
 echo("<thead>
         <tr>
@@ -24,7 +34,7 @@ while ($resSelect = mysqli_fetch_array($querySelect)) {
             <tr>
                 <td style='width: 20%'>" . $resSelect['id'] . "</td>
                 <td style='width: 20%'>" . $resSelect['idUser'] . "</td>
-                <td style='width: 40%'>" . $resSelect['number'] . "</td>
+                <td style='width: 40%'>+" . $resSelect['code'] . " (" . $resSelect['areaCode'] . ") ". $resSelect['number'] . "</td>
                 <td style='width: 20%'>
                     <a href='#main-modal'><i class='material-icons'>edit</i></a>
                     <a href='#main-modal'><i class='material-icons'>delete</i></a>
